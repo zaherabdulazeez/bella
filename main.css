@@ -2464,19 +2464,17 @@
 
 	#map-container {
 		background-color: #1f1815;
-		/* background-attachment: scroll,								fixed; */
-		/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								auto 100%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
-		padding: 0em 1em 5em 1em;
+		padding: 0em 1em 0em 0em;
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 60%;
+		width: 70%;
 	}
 
 		#map-container strong, #map-container b {
@@ -2507,7 +2505,7 @@
 		padding: 0em 1em 0em 1em;
 		position: fixed;
 		text-align: right;
-		width: 60%;
+		width: 70%;
 	}
 
 		#footer .icons {
@@ -2547,10 +2545,10 @@
 /* Main */
 
 	#chart-container {
-		margin-left: 60%;
+		margin-left: 70%;
 		max-width: 54em;
 		padding: 8em 4em 4em 4em;
-		width: calc(100% - 60%);
+		width: calc(100% - 70%);
 	}
 
 		#chart-container > section {
@@ -2564,6 +2562,10 @@
 				margin-top: 0;
 				padding-top: 0;
 			}
+
+#map{
+	height:100%;
+}
 
 /* Poptrox */
 
@@ -2851,7 +2853,7 @@
 
 			#map-container {
 				padding: 0em 1em 4em 1em;
-				width: 60%;
+				width: 70%;
 			}
 
 				#map-container h1 {
@@ -2866,7 +2868,7 @@
 
 			#footer {
 				padding: 0em 1em 0em 1em;
-				width: 60%;
+				width: 70%;
 			}
 
 				#footer .copyright li {
@@ -2880,7 +2882,7 @@
 		/* Main */
 
 			#chart-container {
-				margin-left: 60%;
+				margin-left: 70%;
 				max-width: none;
 				padding: 6em 3em 3em 3em;
 				width: calc(100% - 30%);
@@ -2905,38 +2907,20 @@
 			}
 
 		/* Header */
-			#map-container {
-		background-color: #1f1815;
-		/* background-attachment: scroll,								fixed; */
-		/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
-		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								auto 100%;
-		color: rgba(255, 255, 255, 0.5);
-		height: 100%;
-		left: 0;
-		padding: 0em 1em 5em 1em;
-		position: fixed;
-		text-align: right;
-		top: 0;
-		width: 60%;
-	}
-
+			
 			#map-container {
 				/* background-attachment: scroll; */
 				background-position: top left, center center;
 				background-size: auto,		cover;
 				left: auto;
-				padding: 6em 4em;
+				padding: 0em 1em 4em 1em;
 				position: relative;
 				text-align: center;
 				top: auto;
 				width: 100%;
-			}
-			#map {
-				height:100%;
-			}
+				}
 
+			
 				#map-container h1 {
 					font-size: 1.75em;
 				}
@@ -2944,6 +2928,15 @@
 					#map-container h1 br {
 						display: inline;
 					}
+
+				#map{
+					
+					height:100%;
+					position:relative;
+				}
+
+		/* Main */
+				
 
 		/* Footer */
 
