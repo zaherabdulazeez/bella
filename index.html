@@ -1,61 +1,48 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lifestyle Chart</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="./main.css" />
-		<!--  -->
-	</head>
-	<body id="top" style="overflow-x:hidden;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bella | Visualization of Mumbai Lifestyle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+ 
+</head>
+<body>
 
-		<!-- Map Container -->
-			<div id="map-container">
-<!-- 				<h1><strong>Map of Mumbai</strong></h1>
- -->				<div id="map"></div>
-			</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Visualization of Mumbai Lifestyle</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#">Home</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-cloud-download"></span> Github</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+	    <div class="col-sm-8 text-left" id="map"> 
+	    </div> 
+	    <div class="col-sm-4 sidenav">
+	    </div>
+  </div>
+</div>
+<script src="map.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFsYlnSwSiUjulcQH8JuDuSG-r8e7oDaM&callback=initMap" async defer></script>
 
-		<!-- Chart Container -->
-			<div id="chart-container" >
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Charts<br />
-							Here goes the Charts	</h2>
-						</header>
-						<p>Lots of Charts</p>
-					</section>
-					<section id="one">
-						<header class="major">
-							<h2>Charts<br />
-							Here goes the Charts	</h2>
-						</header>
-						<p>Lots of Charts</p>
-					</section>
-					<section id="one">
-						<header class="major">
-							<h2>Charts<br />
-							Here goes the Charts	</h2>
-						</header>
-						<p>Lots of Charts</p>
-					</section>
-					<section id="one">
-						<header class="major">
-							<h2>Chart<br />
-							Here goes the Charts	</h2>
-						</header>
-						<p>Lots of Charts</p>
-					</section>
-
-		<!-- Google Maps API -->
-		<script src="./map.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFsYlnSwSiUjulcQH8JuDuSG-r8e7oDaM&callback=initMap"
-		async defer></script>
-		</body>
+</body>
 </html>
