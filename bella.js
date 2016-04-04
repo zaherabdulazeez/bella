@@ -3,3 +3,9 @@
 * All interactions are implemented here
 * All visualizations are implemented here
 */
+ $(function() {
+    
+    $('#food').slider()
+    $('#health').slider()
+    $('#education').slider()
+});

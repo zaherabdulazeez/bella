@@ -8,7 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="main.css">
- 
+  <script src="bella.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="slider.css">
+  <script src="bootstrap-slider.js"></script>
+
 </head>
 <body>
 
@@ -38,6 +41,41 @@
 	    <div class="col-sm-8 text-left" id="map"> 
 	    </div> 
 	    <div class="col-sm-4 sidenav">
+	    	<div class="form-group">
+		      <select class="form-control" id="sel1">
+		      	<option selected disabled>---- Select Facilities To Be Indexed ----</option>
+		        <option>Food (Eateries)</option>
+		        <option>Health (Hospitals)</option>
+		        <option>Education (Schools)</option>
+		        <option>Shopping</option>
+		        <option>Parks</option>
+		        <option>Movies</option>
+		        <option>Night Life</option>
+		      </select>
+		    </div>
+		    <div class="well well-sm" id="disp-index">
+			    <h4>Index: <span class="index-value">10	</span> </h4>
+			    <p>Food: <span class="index-value">10</span> | Health: <span class="index-value">10	</span> | Education: <span class="index-value">10	</span>	</p>
+		    </div>
+
+		    <div id="sel-help" class="well well-sm" >
+		    	<h4>Accessibilty to Food, Health & Education:</h4>
+		    	<p>Set Rating Below<p> 
+		    </div>
+		    
+		    <div class="preference well well-sm">
+		    	<h4>Food</h4>
+		    	<input id="food" type="text" class="span2" value="" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="3" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+		    </div>
+		    <div class="preference well well-sm">
+		    	<h4>Health</h4>
+		    	<input id="health" type="text" class="span2" value="" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="3" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+		    </div>
+		    <div class="preference well well-sm">
+		    	<h4>Education</h4>
+		    	<input id="education" type="text" class="span2" value="" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="3" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+		    </div>
+	    
 	    </div>
   </div>
 </div>
