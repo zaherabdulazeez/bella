@@ -17,9 +17,6 @@ class MasterDataFrame(object):
 
 	def add_key(key):
 
-
-
-
 class JSONObject(object):
 	"""The full json data frame where data from all the bella classes are aggregated"""
 	def __init__(self, arg):

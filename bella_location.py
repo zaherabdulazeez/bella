@@ -7,16 +7,24 @@ decodes these location to addresses
 
 class LocationSampler(object):
 	"""Samples or probes latitudes and longitudes """
-	def __init__(self, loc_centre, stepsize=200.0, bounds):
+	def __init__(self, loc_centre, bounds, stepsize=200.0):
 		""" Instantiate Bellas Location Sampler with starting centre point - loc_centre- a dict with lat & long,
-		sampling stepsize in meters and bounds - a dict with lat and long
+		sampling stepsize in meters and bounds - a dict with lat and long or radius
 		"""
-		self.centre = loc_centre
+		self.centre = loc_centre['geometry']
 		self.start_lat = self.centre['lat']
 		self.start_long = self.centre['long']
 		self.stepsize = stepsize
-		self.stop_lat = bounds.lat
-		self.stop_long = bounds.long
+		if 'radius' in bounds:
+			self.bound_radius = bounds['radius']
+		elif 'geometry' in bounds:
+			self.stop_lat = bounds['geometry']['lat']
+			self.stop_long = bounds['geometry']['long']
+		else:
+			self.bound_radius = None
+			self.stop_lat = None
+			self.stop_long = None
+
 
 	def _convert_step(self):
 		"""Converts stepsize to degrees of latitude and longitude. Note that we assume that each degree of 
@@ -32,8 +40,29 @@ class LocationSampler(object):
 		step = {'lat':lat_step, 'long':long_step }
 		return step
 	
-	def sample(self):
+	def rectangle_sample(self):
 		"""The sampling method of Location Sampler"""
 		step = self._convert_step()
+		num_steps = {}
+		if (self.stop_lat != None) and (self.stop_long != None):
+			num_steps['lat'] =int(round(abs((self.stop_lat - self.start_lat)/step['lat']))) 
+			num_steps['long'] = int(round(abs((self.stop_long - self.start_long)/step['long'])))
+
+		else:
+			num_steps['lat'] = 50
+			num_steps['long'] = 50
+
+		
+		k = 0
+		for i in range(int(num_steps['lat']+1)):
+			for j in range(int(num_steps['long']+1)):
+				sample[k]['geometry']['lat'] = self.start_lat + (i*step['lat'])
+				sample[k]['geometry']['long'] = self.start_long + (j*step['long'])
+			k = k + 1
+
+		return sample
+
+
+			
 
 
