@@ -1,7 +1,10 @@
-  /*   body {
-      overflow:hidden;
-    } */
-      /* Remove the navbar's default margin-bottom and rounded borders */ 
+  @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+    body,p,h4,h5,h6 {
+      font-family:'Roboto',sans-serif;
+      /* text-shadow: 2px 1px 1px #aaa */
+    }
+
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -41,14 +44,18 @@
       height:100%;
     }
   
-    .preference {
-      background:lightblue;
+    .preference,.well {
+      background:lightgray;
     }
 
     #disp-index, #sel-help {
-      background:lightcyan;
+      /* background:lightcyan; */
     }
 
     .index-value {
       color:red;
+    }
+
+    p{
+      margin:0;
     }
