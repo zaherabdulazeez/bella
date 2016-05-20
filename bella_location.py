@@ -44,7 +44,7 @@ class LocationSampler(object):
 			num_steps['lat'] = int(round(abs(self.rect_length/self.stepsize))) 
 			num_steps['long'] = int(round(abs(self.rect_breadth/self.stepsize)))
 		except:
-			print  "LocationSampler rectangle_sample bounds is a dict of the form {'rectangle':{'length':10000,'breadth':50000 }}"
+			print ("LocationSampler rectangle_sample bounds is a dict of the form {'rectangle':{'length':10000,'breadth':50000 }}")
 		
 		sample = []
 		#in the following loop. a better sampling has to be implemented. Say we have a starting centre and the length and breadth of the rect
